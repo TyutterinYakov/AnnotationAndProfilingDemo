@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.annotation.PostProxy;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -10,6 +11,7 @@ public class ProfilingController implements ProfilingControllerMBean{
     private boolean enabled;
 
     public boolean isEnabled() {
+        System.out.println("Профилирование: "+enabled);
         return enabled;
     }
 
